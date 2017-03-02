@@ -1,0 +1,10 @@
+
+	RewriteEngine On
+
+	RewriteRule ^rest?$ rest.php
+	
+	RewriteRule ^rest/([a-z]+)/([0-9]+) rest.php?action=$1&id=$2
+
+	RewriteRule ^rest/([0-9]+) rest.php?id=$1
+
+	RewriteRule ^rest/([a-z]+) rest.php?action=$1
